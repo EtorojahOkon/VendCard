@@ -46,6 +46,9 @@ if(isset($_POST["submit"])) {
 
 The request can also be used with payment APIs
 If the payment is successfull call this API in the success statement...
-Viola
 Remember to validate and sanitize form inputs
+Viola
+Version2 will include API endpoint parameters for users to specify valid networks
+Watch out
+
 #Enjoy#

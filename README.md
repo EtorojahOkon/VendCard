@@ -1,7 +1,7 @@
 # VendCard
 A dummy recharge card vending API
 
-To use simply send a curl GET request like "https://www.fussionhq.com/etoro/api/vendor.php?network=".urlencode("mtn")."&amount=".urlencode("200")
+To use simply send a curl GET request like "https://www.fussionhq.com/etoro/api/vendor.php?network=".$network."&amount=".$amount
 
 $network represents the type of network eg MTN, AIRTEL, ETISALAT, GLO
 The $amount is the amount wanted in NGN eg 200.

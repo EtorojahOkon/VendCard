@@ -1,7 +1,9 @@
 # VendCard
 A dummy recharge card vending API
 
-To use simply send a curl GET request like "https://www.fussionhq.com/etoro/api/vendor.php?network=".$network."&amount=".$amount
+To use
+Download and place in your server.
+Simply send a curl GET request like "https://yoursite.com/api/vendor.php?network=".$network."&amount=".$amount
 
 $network represents the type of network eg MTN, AIRTEL, ETISALAT, GLO
 The $amount is the amount wanted in NGN eg 200.
@@ -12,7 +14,7 @@ Eg usage
 <?php
 $network = urlencode("MTN");
 $amount = urlencode("200");
-$url = "https://www.fussionhq.com/etoro/api/vendor.php?network=".$network."&amount=".$amount;
+$url = "https://yoursite.com/api/vendor.php?network=".$network."&amount=".$amount;
 $request = curl_init();
 curl_setopt($request, CURLOPT_URL, $url);
 $response = curl_exec($request);
@@ -26,7 +28,7 @@ You can also get the values from a form eg
 if(isset($_POST["submit"])) {
   $network = urlencode($_POST["network"]);
   $amount = urlencode($_POST["amount"]);
-  $url = "https://www.fussionhq.com/etoro/api/vendor.php?network=".$network."&amount=".$amount;
+  $url = "https://yoursite.com/api/vendor.php?network=".$network."&amount=".$amount;
   $request = curl_init();
   curl_setopt($request, CURLOPT_URL, $url);
   $response = curl_exec($request);

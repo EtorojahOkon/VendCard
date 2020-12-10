@@ -20,10 +20,10 @@ if(isset($_GET["network"])) {
     $amount = sanitizeAmount($_GET["amount"]);
     if(strtolower($network) == "mtn" || strtolower($network) == "airtel" || strtolower($network) == "etisalat" || strtolower($network) == "glo") {
         $card_id = strtoupper($network)."_".rand(100000, 999999);
-        echo json_encode(["network" => $network, "amount" => $amount, "card_id" => $card_id, "date_gen" => $date, "suscribers" => $vouchers]);
+        echo json_encode(["status" => "success", "network" => $network, "amount" => $amount, "card_id" => $card_id, "date_gen" => $date, "suscribers" => $vouchers]);
     }
     else {
-        echo "Invalid Networks!";
+        echo json_encode(["status" => "error", "network" => "Invalid Networks!"]);
         
     }
 }
